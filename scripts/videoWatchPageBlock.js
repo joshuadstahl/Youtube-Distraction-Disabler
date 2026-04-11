@@ -10,7 +10,7 @@ function blockDistractions() {
         //check again in a bit.
         setTimeout(() => {
             blockDistractions();
-        }, 1000);
+        }, 100);
     }
 
 }
@@ -30,7 +30,7 @@ function removeOverlays() {
         //check again in a bit.
         setTimeout(() => {
             removeOverlays();
-        }, 1000);
+        }, 100);
         console.log("No overlays found");
     }
 

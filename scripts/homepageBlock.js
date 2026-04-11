@@ -9,7 +9,7 @@ function removeHompageContent() {
         //check again in a bit.
         setTimeout(() => {
             removeHompageContent();
-        }, 1000);
+        }, 100);
     }
 
 }

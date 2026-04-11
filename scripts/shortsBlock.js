@@ -9,7 +9,7 @@ function removeShortsContent() {
         //check again in a bit.
         setTimeout(() => {
             removeShortsContent();
-        }, 1000);
+        }, 100);
     }
 
 }
