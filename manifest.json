@@ -17,6 +17,13 @@
             "https://youtube.com/",
             "https://www.youtube.com/"
         ]
+    },
+    {
+        "js": ["scripts/shortsBlock.js"],
+        "matches": [
+            "https://youtube.com/shorts/*",
+            "https://www.youtube.com/shorts/*"
+        ]
     }
   ]
 }
