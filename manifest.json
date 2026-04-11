@@ -4,28 +4,37 @@
     "version": "1.0",
     "manifest_version": 3,
     "content_scripts": [
-    {
-      "js": ["scripts/videoWatchPageBlock.js"],
-      "matches": [
-        "https://youtube.com/watch*",
-        "https://www.youtube.com/watch*"
-      ]
-    },
-    {
-        "js": ["scripts/homepageBlock.js"],
+      {
+        "js": ["scripts/blockingScripts.js", "scripts/navigationEventLoader.js"],
         "matches": [
-            "https://youtube.com/",
-            "https://www.youtube.com/",
-            "https://youtube.com/feed/subscriptions",
-            "https://www.youtube.com/feed/subscriptions"
+          "https://youtube.com/*",
+          "https://www.youtube.com/*"
         ]
-    },
-    {
-        "js": ["scripts/shortsBlock.js"],
+      },
+      {
+        "js": ["scripts/blockingScripts.js", "scripts/videoWatchPageBlock.js"],
         "matches": [
-            "https://youtube.com/shorts/*",
-            "https://www.youtube.com/shorts/*"
+          "https://youtube.com/watch*",
+          "https://www.youtube.com/watch*"
         ]
-    }
+      },
+      {
+          "js": ["scripts/blockingScripts.js", "scripts/homepageBlock.js"],
+          "matches": [
+              "https://youtube.com/",
+              "https://www.youtube.com/",
+              "https://youtube.com/feed/subscriptions/*",
+              "https://www.youtube.com/feed/subscriptions/*"
+          ]
+      },
+      {
+          "js": ["scripts/blockingScripts.js", "scripts/shortsBlock.js"],
+          "matches": [
+              "https://youtube.com/shorts/*",
+              "https://www.youtube.com/shorts/*",
+              "https://youtube.com/shorts*",
+              "https://www.youtube.com/shorts*"
+          ]
+      }
   ]
 }
