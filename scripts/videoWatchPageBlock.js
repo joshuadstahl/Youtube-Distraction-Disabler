@@ -1,4 +1,4 @@
-function blockDistractions(page) {
+function blockDistractions() {
 
 
     const sidebar = document.querySelector("#secondary");
@@ -11,10 +11,8 @@ function blockDistractions(page) {
         setTimeout(() => {
             blockDistractions();
         }, 1000);
-        console.log("No sidebar found");
     }
 
-    console.log("Distractions blocked");
 }
 function removeOverlays() {
 
