@@ -12,10 +12,12 @@
       ]
     },
     {
-        "js": ["scripts/homebackBlock.js"],
+        "js": ["scripts/homepageBlock.js"],
         "matches": [
             "https://youtube.com/",
-            "https://www.youtube.com/"
+            "https://www.youtube.com/",
+            "https://youtube.com/feed/subscriptions",
+            "https://www.youtube.com/feed/subscriptions"
         ]
     },
     {
