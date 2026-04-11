@@ -14,7 +14,8 @@ navigation.addEventListener('navigate', (event) => {
 });
 
 navigation.addEventListener('navigate', (event) => {
-    if (event.destination.url.includes("youtube.com/feed/") || event.destination.url.includes("youtube.com/")) {
+    console.log("Navigation event detected: ", event.destination.url);
+    if (event.destination.url.includes("youtube.com/feed/") || event.destination.url == "https://youtube.com/" || event.destination.url == "https://www.youtube.com/" || event.destination.url == "https://youtube.com" || event.destination.url == "https://www.youtube.com") {
         removeHompageContent();
     }
 });

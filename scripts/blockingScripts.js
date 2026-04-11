@@ -19,10 +19,15 @@ function removeShortsContent() {
 //removes the main content of the home page.
 function removeHompageContent() {
 
-    const homepageContent = document.querySelector("#primary"); //selects main contents of home page.
-    if (homepageContent) {
+    let primaryContent = document.querySelector("#primary"); //selects main contents of home page.
+    if (primaryContent) {
+        primaryContent.remove();
         
-        homepageContent.remove();
+        //remove primary content again in 100ms, as it tends to load again.
+        setTimeout(() => {
+            primaryContent = document.querySelector("#primary"); //selects main contents of home page.
+            primaryContent.remove();
+        }, 100);
     }
     else {
         //check again in a bit.
