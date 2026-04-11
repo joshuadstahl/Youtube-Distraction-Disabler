@@ -10,6 +10,13 @@
         "https://youtube.com/watch*",
         "https://www.youtube.com/watch*"
       ]
+    },
+    {
+        "js": ["scripts/homebackBlock.js"],
+        "matches": [
+            "https://youtube.com/",
+            "https://www.youtube.com/"
+        ]
     }
   ]
 }
