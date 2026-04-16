@@ -48,12 +48,10 @@ function blockSidebar() {
         //if there is related content tag, that means there is a playlist. only remove related content.
         if (playlist) {
             related.remove();
-            console.log("removing related content.")
         }
         //if there isn't then remove whole sidebar.
         else {
             sidebar.remove();
-            console.log("remove everything else.");
         }
     }
     else {
