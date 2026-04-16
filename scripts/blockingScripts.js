@@ -38,13 +38,23 @@ function removeHompageContent() {
 
 }
 
-//removes the sidebar
+//removes the recommended content from the sidebar, but not a list of videos from a playlist if it is there.
 function blockSidebar() {
 
-    const sidebar = document.querySelector("#secondary");
+    const related = document.querySelector("#related"); //selects related content. This id is only there if there is a playlist.
+    const sidebar = document.querySelector("#secondary"); //selects whole sidebar, which contains related content (and can** contain playlist information) and is always there.
+    const playlist = document.querySelector("#playlist"); //selects playlist div, if it is there.
     if (sidebar) {
-        
-        sidebar.remove();
+        //if there is related content tag, that means there is a playlist. only remove related content.
+        if (playlist) {
+            related.remove();
+            console.log("removing related content.")
+        }
+        //if there isn't then remove whole sidebar.
+        else {
+            sidebar.remove();
+            console.log("remove everything else.");
+        }
     }
     else {
         //check again in a bit.
