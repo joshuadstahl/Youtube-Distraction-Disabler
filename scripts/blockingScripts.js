@@ -19,17 +19,12 @@ function removeShortsContent() {
 //removes the main content of the home page.
 function removeHompageContent() {
 
-    let primaryContent = document.querySelector("#primary"); //selects main contents of home page.
+    //this class is the class for the main content of the home page. This one specifically because if you just remove 
+    //all the divs with "primary" as an ID (there are more than one per page) then it will
+    //prevent the search bar from working properly.
+    let primaryContent = document.querySelector(".ytd-two-column-browse-results-renderer"); //selects main contents of home page.
     if (primaryContent) {
         primaryContent.remove();
-        
-        //remove primary content again in 100ms, as it tends to load again.
-        setTimeout(() => {
-            primaryContent = document.querySelector("#primary"); //selects main contents of home page.
-            if (primaryContent) {
-                primaryContent.remove();
-            }
-        }, 100);
     }
     else {
         //check again in a bit.
