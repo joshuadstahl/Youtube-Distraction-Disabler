@@ -26,7 +26,9 @@ function removeHompageContent() {
         //remove primary content again in 100ms, as it tends to load again.
         setTimeout(() => {
             primaryContent = document.querySelector("#primary"); //selects main contents of home page.
-            primaryContent.remove();
+            if (primaryContent) {
+                primaryContent.remove();
+            }
         }, 100);
     }
     else {
